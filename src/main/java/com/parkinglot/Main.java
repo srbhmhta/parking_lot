@@ -19,10 +19,12 @@ import com.parkinglot.service.ParkingServiceImpl;
 
 public class Main {
    public static void main(String[] args) throws IOException {
+	   
+	   System.out.println("Starting parking lot");
 	   ServiceDispatcher serviceDispatcher = init();
 	   boolean x=true;
 	   if(args.length>0 && args[0].contains(".txt")) {
-		   String fileName = "/Users/pankaj/source.txt";
+		   String fileName = "";
 		   Path path = Paths.get(fileName);
 		   byte[] bytes = Files.readAllBytes(path);
 		   List<String> allLines = Files.readAllLines(path, StandardCharsets.UTF_8);  

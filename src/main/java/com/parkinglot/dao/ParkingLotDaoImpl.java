@@ -36,7 +36,7 @@ public class ParkingLotDaoImpl implements ParkingLotDao{
 	@Override
 	public String parkVehicle(Vehicle vehicle) {
 	   List<ParkingSlot> emptySlotList=this.getParkinglot().getParkingslotList().stream()
-			                  .filter(slot->slot.isEmpty()).collect(Collectors.toList());
+			                  .filter(pslot->pslot.isEmpty()).collect(Collectors.toList());
 	   if(emptySlotList.isEmpty())
 		   return "Sorry, parking lot is full";
 	
