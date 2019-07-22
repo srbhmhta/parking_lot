@@ -24,14 +24,18 @@ public class Main {
 	   
 	   boolean x=true;
 	   if(args.length>0 && args[0].contains(".txt")) {
-		   String fileName = "/Users/pankaj/source.txt";
+		   String dir = System.getProperty("user.dir");
+		   String fileName = dir+"/functional_spec/fixtures/"+args[0];
 		   Path path = Paths.get(fileName);
 		   byte[] bytes = Files.readAllBytes(path);
 		   List<String> allLines = Files.readAllLines(path, StandardCharsets.UTF_8);  
 		   for(String line:allLines) {
 		  	 String[] inputParam= line.split(" ");
-		  	List<String> param=Arrays.asList(inputParam);
-		  	param.remove(0);
+			   List<String> param=new ArrayList<String>();
+			   for(int i=1;i<inputParam.length;i++) {
+				   param.add(inputParam[i]);
+			   }
+
 		  	serviceDispatcher.dispatch(inputParam[0],param);
 		   }
 	   }else {

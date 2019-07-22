@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/bin/bash
 # Add script to run program here.
 # Complete bin/setup so that after it is
 # run, bin/parking_lot can be used to launch
@@ -8,7 +8,7 @@
 # Use DIR variable above to pinpoint your jar/executable/main class
 # e.g.
 # - if java
-java -cp $DIR/../lib/ParkingLot-1.0-SNAPSHOT.jar com.parkinglot.Main $1
+java -jar build/libs/parking_lot-all-1.0.jar $1
 # - if python
 #   python3 $DIR/../main.py $1
 # - if ruby

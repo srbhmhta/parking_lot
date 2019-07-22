@@ -18,7 +18,7 @@ public class ParkingServiceImpl implements ParkingService {
 	@Override
 	public void createParkingLot(List<String> param) {
 		parkinglotDao.addParkingLot(parkinglotDao.build(param));
-       System.out.println("Created a parking lot with "+param.get(0) +"slots");
+       System.out.println("Created a parking lot with "+param.get(0) +" slots");
 	}
 
 	@Override
