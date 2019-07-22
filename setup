@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "stating build"
+gradle clean build
+echo "Build finish"
