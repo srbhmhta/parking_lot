@@ -6,3 +6,5 @@
 .DS_Store
 .git/
 build/
+.settings/
+bin/.gitignore

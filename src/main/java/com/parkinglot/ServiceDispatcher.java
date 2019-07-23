@@ -41,6 +41,7 @@ public class ServiceDispatcher {
 				break;
 
 		default:
+			System.out.println("Invalid input try again");
 			break;
 		}
 	}
