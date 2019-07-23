@@ -4,11 +4,11 @@ import java.util.List;
 
 public interface ParkingService {
 
-	void createParkingLot(List<String> param);
+	String createParkingLot(List<String> param);
 
-	void parkVehicle(List<String> param);
+	String parkVehicle(List<String> param);
 
-	void leaveVehicle(List<String> param);
+	String leaveVehicle(List<String> param);
 
 
 }

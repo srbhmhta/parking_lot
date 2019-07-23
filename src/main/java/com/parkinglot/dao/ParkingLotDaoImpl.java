@@ -49,7 +49,7 @@ public class ParkingLotDaoImpl implements ParkingLotDao{
 		    		this.getParkinglot().getParkingslotList().get(i).setEmpty(false);
 		    	}
 		    }	   
-		   return "Allocated slot number :"+firstavailableSlotId;
+		   return "Allocated slot number: "+firstavailableSlotId;
 		}
 		
 	}

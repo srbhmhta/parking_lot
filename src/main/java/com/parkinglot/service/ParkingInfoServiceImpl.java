@@ -16,28 +16,27 @@ public class ParkingInfoServiceImpl implements ParkingInfoService{
 	}
 
 	@Override
-	public void getStatus() {
-		System.out.print("Slot No." + "\t");
-		System.out.print("Registration No" + "\t");
-		System.out.println("Colour");
+	public StringBuilder getStatus() {
+		StringBuilder builder= new StringBuilder();
+		builder.append("Slot No."+ "\t").append("Registration No" + "\t").append("Colour");
 		for(ParkingSlot slot:parkingLotDao.getFilledSlot()) {
-			System.out.print(slot.getSlotId() + "\t");
-			System.out.print(slot.getVehicle().getVehicleReg() + "\t");
-			System.out.println(slot.getVehicle().getColor());
+			builder.append("\n"+slot.getSlotId() + "\t");
+			builder.append(slot.getVehicle().getVehicleReg() + "\t");
+			builder.append(slot.getVehicle().getColor());
 
 		}
+		return builder;
+	}
+
+	@Override
+	public String getRegNumberfromColorStatus(List<String> param) {
+		return parkingLotDao.getNumberListFromColor(param.get(0)).toString();
 		
 	}
 
 	@Override
-	public void getRegNumberfromColorStatus(List<String> param) {
-		System.out.println(parkingLotDao.getNumberListFromColor(param.get(0)).toString());
-		
-	}
-
-	@Override
-	public void getSlotNumberFromRegNumberStatus(List<String> param) {
-		System.out.println(parkingLotDao.getslotFromRegNumber(param.get(0)));
+	public String getSlotNumberFromRegNumberStatus(List<String> param) {
+		return parkingLotDao.getslotFromRegNumber(param.get(0));
 		
 	}
 
@@ -50,8 +49,8 @@ public class ParkingInfoServiceImpl implements ParkingInfoService{
 	}
 
 	@Override
-	public void getSlotNumbersfromColorStatus(List<String> param) {
-		System.out.println(parkingLotDao.getslotFromColor(param.get(0)));
+	public List<Integer> getSlotNumbersfromColorStatus(List<String> param) {
+		return parkingLotDao.getslotFromColor(param.get(0));
 
 		
 	}

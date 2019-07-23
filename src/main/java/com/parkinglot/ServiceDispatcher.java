@@ -1,5 +1,8 @@
 package com.parkinglot;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.List;
 
 import com.parkinglot.service.ParkingInfoService;
@@ -12,28 +15,29 @@ public class ServiceDispatcher {
 	ParkingInfoService parkingninfoService;
 	
     public void dispatch(String command, List<String> param){
-		 switch (command) {
+         
+    	switch (command) {
 		
 		 case "create_parking_lot":
-			 parkingService.createParkingLot(param);
+			System.out.println( parkingService.createParkingLot(param));
 			break;
 		 case "park":
-			 parkingService.parkVehicle(param);
+			 System.out.println(parkingService.parkVehicle(param));
 				break;
 		 case "leave":
-			 parkingService.leaveVehicle(param);
+			 System.out.println(parkingService.leaveVehicle(param));
 				break;
 		 case "status":
-			 parkingninfoService.getStatus();
+			 System.out.println(parkingninfoService.getStatus());
 				break;
 		 case "registration_numbers_for_cars_with_colour":
-			 parkingninfoService.getRegNumberfromColorStatus(param);
+			 System.out.println(parkingninfoService.getRegNumberfromColorStatus(param));
 				break;
 		 case "slot_numbers_for_cars_with_colour":
-			 parkingninfoService.getSlotNumbersfromColorStatus(param);
+			 System.out.println(parkingninfoService.getSlotNumbersfromColorStatus(param));
 				break;
 		 case "slot_number_for_registration_number":
-			 parkingninfoService.getSlotNumberFromRegNumberStatus(param);
+			 System.out.println(parkingninfoService.getSlotNumberFromRegNumberStatus(param));
 				break;
 
 		default:

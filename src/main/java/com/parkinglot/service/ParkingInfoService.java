@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface ParkingInfoService {
 
-	void getStatus();
+	StringBuilder getStatus();
 
-	void getRegNumberfromColorStatus(List<String> param);
+	String getRegNumberfromColorStatus(List<String> param);
 
-	void getSlotNumberFromRegNumberStatus(List<String> param);
+	String getSlotNumberFromRegNumberStatus(List<String> param);
 
-	void getSlotNumbersfromColorStatus(List<String> param);
+	List<Integer> getSlotNumbersfromColorStatus(List<String> param);
 
 }
