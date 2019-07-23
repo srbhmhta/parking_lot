@@ -23,12 +23,12 @@ public class Main {
 	   ServiceDispatcher serviceDispatcher = init();	   
 	   if(args.length>0 && args[0].contains(".txt")) {
 		   String dir = System.getProperty("user.dir");
-		   String fileName = dir+"/functional_spec/fixtures/"+args[0];
+		   String fileName = args[0];
 		   Path path = Paths.get(fileName);
 		   byte[] bytes = Files.readAllBytes(path);
 		   List<String> allLines = Files.readAllLines(path, StandardCharsets.UTF_8); 
 		   PrintStream o = new PrintStream(new File("output.txt")); 
-//		   System.setOut(o); 
+		   System.setOut(o); 
 		   for(String line:allLines) {
 		  	 String[] inputParam= line.split(" ");
 			   List<String> param=new ArrayList<String>();
