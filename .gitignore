@@ -7,4 +7,3 @@
 .git/
 build/
 .settings/
-bin/.gitignore
