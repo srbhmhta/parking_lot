@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "stating build"
-gradle clean fatjar
+cd .. && gradle -p parking_lot clean fatjar
 echo "Build finish"
