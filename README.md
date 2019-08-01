@@ -4,9 +4,9 @@ To run parking lot application.
 
 cd /parking_lot
 
-run sh setup
+run sh bin/setup
 
-run sh parking_lot or sh parking_lot <inputfilename>.txt
+run sh bin/parking_lot or sh bin/parking_lot <inputfilename>.txt
 
 for normal commands out put will be printed as per instruction for input text out will be available on output.txt.
 ```
